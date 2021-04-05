@@ -28,9 +28,6 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
-# Better looking error page
-gem 'better_errors', '~> 2.9', '>= 2.9.1'
-
 # A modern CSS framework based on Flexbox
 gem 'bulma-rails', '~> 0.9.1'
 
@@ -48,10 +45,12 @@ group :development do
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
+  # Better looking error page
+  gem 'better_errors', '~> 2.9', '>= 2.9.1'
   # Guard is a command line tool to easily handle events on file system modifications.
-  gem 'guard', '~> 2.16', '>= 2.16.2'
+  # gem 'guard', '~> 2.1', '>= 2.14.1'
   # Guard::LiveReload automatically reloads your browser when 'view' files are modified.
-  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+  # gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 end
 
 group :test do
