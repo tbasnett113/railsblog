@@ -5,8 +5,6 @@ ruby '2.7.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -37,6 +35,13 @@ gem 'simple_form', '~> 5.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3', '~> 1.4'
+end
+
+group :production do
+    # Postgres SQL database
+  gem 'pg', '~> 1.2', '>= 1.2.3'
 end
 
 group :development do
@@ -47,10 +52,6 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   # Better looking error page
   gem 'better_errors', '~> 2.9', '>= 2.9.1'
-  # Guard is a command line tool to easily handle events on file system modifications.
-  # gem 'guard', '~> 2.1', '>= 2.14.1'
-  # Guard::LiveReload automatically reloads your browser when 'view' files are modified.
-  # gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 end
 
 group :test do
